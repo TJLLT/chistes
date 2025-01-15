@@ -2,13 +2,138 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mi Página con AdSense</title>
+  <title>Página de Chistes</title>
+
+  <!-- Código de AdSense automático (recomendado colocarlo en el head).
+       Tu client ID aparece en la URL, asegúrate de que coincida con el que copiaste. -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3108017132116722"
+     crossorigin="anonymous"></script>
+
+  
+
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-3108017132116722",
+      enable_page_level_ads: true
+    });
+  </script>
+  
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    #chiste-container {
+      margin: 20px 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #555;
+    }
+    #btn-chiste {
+      background: #007BFF;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #btn-chiste:hover {
+      background: #0056b3;
+    }
+    hr {
+      margin: 30px 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>¡Hola mundo con AdSense!</h1>
-  <p>Este es un ejemplo sencillo para integrar Google AdSense.</p>
-  
-  <!-- Aquí insertaremos el bloque de anuncios más abajo -->
-  
+
+  <h1>Generador de Chistes</h1>
+  <p>Haz clic en el botón para mostrar un chiste aleatorio. ¡Disfruta!</p>
+
+  <!-- Contenedor donde se mostrará el chiste -->
+  <div id="chiste-container">Presiona "Siguiente Chiste" para empezar</div>
+
+  <!-- Botón para generar un nuevo chiste -->
+  <button id="btn-chiste">Siguiente Chiste</button>
+
+  <!-- Aquí va el primer bloque de anuncios (responsivo) -->
+  <hr>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-3108017132116722" 
+       data-ad-slot="1234567890"      
+       data-ad-format="auto"
+       data-full-width-responsive="true">
+  </ins>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <hr>
+
+  <script>
+    // Array de chistes para demostrar la funcionalidad
+    const chistes = [
+  "¿Por qué estaba triste el libro de matemáticas? Porque tenía muchos problemas.",
+  "¿Qué le dice un techo a otro techo? Techo de menos.",
+  "¿Por qué no puede jugar la computadora al fútbol? Porque se le rompen las ventanas.",
+  "—¡Camarero, camarero! Este filete tiene muchos nervios. —Claro, es la primera vez que se lo comen.",
+  "¿Qué hace una abeja en el gimnasio? ¡Zumba!",
+  "¿Por qué las focas del circo miran siempre hacia arriba? ¡Porque arriba están los focos!",
+  "¿Qué le dice un semáforo a otro? —No me mires que me estoy cambiando.",
+  "¿Por qué la gallina cruzó la carretera? Para llegar al otro lado.",
+  "¿Cómo se llama el primo vegano de Bruce Lee? Broco Lee.",
+  "¿Qué le dice un techo a otro? —Techo de menos. (¡Sí, repetido pero igual de gracioso!)",
+  "¿Por qué el mar está salado? Porque la tierra no lo deja comer.",
+  "¿Qué hace una vaca en el espacio? ¡Lanzar la 'vaca' ntes!",
+  "¿Qué hace un mudo bailando? —Una mudanza.",
+  "¿Por qué está feliz la escoba? ¡Porque barre bien!",
+  "¿Qué hace un pez en el mar cuando está aburrido? ¡Nada!",
+  "¿Cómo llamas a un perro que hace magia? ¡Un Labracadabrador!",
+  "¿Qué le dice un sauce llorón a otro sauce llorón? —Me siento tan triste... ¡Bueno, lloremos juntos!",
+  "¿Por qué los esqueletos no pelean entre ellos? Porque no tienen agallas.",
+  "¿Cuál es el vino más amargo? ¡Vino mi suegra!",
+  "¿Qué hace un perro con un taladro? ¡Taladrando!",
+  "¿Por qué van 18 latinos al cine? Porque la película es prohibida para mayores de 17.",
+  "¿Cuál es la fruta más paciente? La esper-a.",
+  "¿Qué le dice el cero al ocho? —Bonito cinturón.",
+  "¿Qué le dice un pez a otro pez? —Nada.",
+  "¿Por qué está tan orgulloso el libro de matemáticas? ¡Porque tiene muchos problemas resueltos!",
+  "¿Qué hace un pato con una pata? ¡Cojea!",
+  "¿Qué hace una abeja en el salón de clases? ¡Dar la 'clase' de zumba!",
+  "¿Por qué estaba contenta la servilleta? Porque encontró a su media naranja en la cocina.",
+  "¿Qué le dice un calcetín a otro calcetín? —Tanto tiempo sin vernos... ¡estamos muy separados!",
+  "¿Qué es peor que encontrarte un gusano en una manzana? ¡Encontrarte medio gusano!",
+  "¿Qué hace un perro en una biblioteca? ¡WIFI!",
+  "¿Cómo llamas a un boomerang que no vuelve? Un palo.",
+  "¿Por qué los patos no tienen dinero? ¡Porque solo tienen la 'bille-duck'!",
+  "¿Qué le dice un cable a otro? —¡Tenemos que hablar, estamos muy tensos!",
+  "¿Por qué no puede un elefante esconderse en un árbol? Porque es muy grande y lo verías.",
+  "¿Qué hace un perro enamorado de un enchufe? Se está 'enchuflando'.",
+  "¿Por qué estaba el tomate rojo? Porque vio la salsa.",
+  "¿Qué hace un electricista en el Polo Norte? Poner focos polares.",
+  "¿Qué hace un pez cuando saca su coche del garaje? ¡Da la 'marcha-atrás'!",
+  "¿Cómo se despiden los químicos? —Ácido un placer."
+];
+
+
+    const chisteContainer = document.getElementById('chiste-container');
+    const btnChiste = document.getElementById('btn-chiste');
+
+    function mostrarChisteAleatorio() {
+      const randomIndex = Math.floor(Math.random() * chistes.length);
+      chisteContainer.textContent = chistes[randomIndex];
+    }
+
+    // Evento para el botón
+    btnChiste.addEventListener('click', mostrarChisteAleatorio);
+  </script>
+
 </body>
 </html>
